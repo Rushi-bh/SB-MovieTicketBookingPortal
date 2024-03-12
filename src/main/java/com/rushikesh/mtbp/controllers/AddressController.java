@@ -61,5 +61,15 @@ public class AddressController {
 		return new ResponseEntity<List<Address>>(addresses, HttpStatus.OK);
 
 	}
+	@GetMapping("state/{state}")
+	public ResponseEntity<List<Address>> getAddressByState(@PathVariable("state") String state) {
+		List<Address> addresses = addressRepository.findByState(state);
+
+		if (addresses.isEmpty()) {
+			throw new EmptyDatabaseException("Addresses not found!!");
+		}
+		return new ResponseEntity<List<Address>>(addresses, HttpStatus.OK);
+
+	}
 
 }
