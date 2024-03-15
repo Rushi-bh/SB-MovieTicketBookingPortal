@@ -3,12 +3,14 @@ package com.rushikesh.mtbp.serviceimpl;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.rushikesh.mtbp.entities.Movie;
 import com.rushikesh.mtbp.exceptions.RecordNotFoundException;
 import com.rushikesh.mtbp.repositories.MovieRepository;
 import com.rushikesh.mtbp.service.MovieService;
 
+@Service
 public class MovieServiceImpl implements MovieService {
 
 	@Autowired

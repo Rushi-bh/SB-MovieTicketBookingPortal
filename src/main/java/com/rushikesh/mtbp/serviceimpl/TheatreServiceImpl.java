@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.rushikesh.mtbp.entities.Address;
 import com.rushikesh.mtbp.entities.Theatre;
@@ -12,6 +13,8 @@ import com.rushikesh.mtbp.exceptions.EmptyDatabaseException;
 import com.rushikesh.mtbp.repositories.TheatreRepository;
 import com.rushikesh.mtbp.service.TheatreService;
 
+
+@Service
 public class TheatreServiceImpl implements TheatreService{
 
 	@Autowired

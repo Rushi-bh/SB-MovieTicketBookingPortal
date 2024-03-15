@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.rushikesh.mtbp.entities.Payment;
 import com.rushikesh.mtbp.entities.Ticket;
@@ -12,6 +13,7 @@ import com.rushikesh.mtbp.exceptions.EmptyDatabaseException;
 import com.rushikesh.mtbp.repositories.PaymentRepository;
 import com.rushikesh.mtbp.service.PaymentsService;
 
+@Service
 public class PaymentServiceImpl implements PaymentsService {
 
 	@Autowired
