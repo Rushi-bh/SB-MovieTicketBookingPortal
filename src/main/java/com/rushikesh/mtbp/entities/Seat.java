@@ -1,5 +1,8 @@
 package com.rushikesh.mtbp.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,8 +22,9 @@ public class Seat {
     @Column(name = "seat_id")
     private int seatId;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "tier_id")
+    @JsonIgnore
     private Tier tier;
 
     @Column(name = "seat_number")

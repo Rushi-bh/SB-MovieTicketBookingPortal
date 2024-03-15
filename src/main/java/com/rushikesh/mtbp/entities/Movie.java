@@ -23,7 +23,7 @@ public class Movie {
     private String movieName;
 
     @Column(name = "ticket_base_price")
-    private int ticketBasePrice;
+    private int baseTicketPrice;
 
 	public int getMovieId() {
 		return movieId;
@@ -41,12 +41,12 @@ public class Movie {
 		this.movieName = movieName;
 	}
 
-	public int getTicketBasePrice() {
-		return ticketBasePrice;
+	public int getBaseTicketPrice() {
+		return baseTicketPrice;
 	}
 
-	public void setTicketBasePrice(int ticketBasePrice) {
-		this.ticketBasePrice = ticketBasePrice;
+	public void setBaseTicketPrice(int baseTicketPrice) {
+		this.baseTicketPrice = baseTicketPrice;
 	}
 
 }
